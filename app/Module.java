@@ -1,6 +1,10 @@
 import com.google.inject.AbstractModule;
+import com.google.inject.name.Names;
+
 import java.time.Clock;
 
+import models.attendees.AttendeesManager;
+import models.attendees.StarPlayers.cricket.CricketAttendeesManager;
 import services.ApplicationTimer;
 import services.AtomicCounter;
 import services.Counter;
@@ -26,6 +30,10 @@ public class Module extends AbstractModule {
         bind(ApplicationTimer.class).asEagerSingleton();
         // Set AtomicCounter as the implementation for Counter.
         bind(Counter.class).to(AtomicCounter.class);
+        
+        bind(AttendeesManager.class)
+        .annotatedWith(Names.named("Cricket"))
+        .to(CricketAttendeesManager.class);
     }
 
 }

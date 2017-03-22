@@ -2,6 +2,8 @@ package controllers;
 
 import java.util.List;
 
+import javax.inject.Named;
+
 import com.google.inject.Inject;
 
 import models.attendees.AttendeesManager;
@@ -16,14 +18,15 @@ import views.html.attendees.count;
 import views.html.attendees.newSoccerAttendeeDetails;
 import views.html.index;
 
-public class AttendeesController extends Controller {
+public class CricketAttendeesController extends Controller {
 	
 	@Inject
     FormFactory formFactory;
+	
 	private AttendeesManager attendeesManager;
 	
 	@Inject
-	public AttendeesController(AttendeesManager attendeesManager) {
+	public CricketAttendeesController(@Named("Cricket") AttendeesManager attendeesManager) {
 		this.attendeesManager = attendeesManager;
 	}
 	

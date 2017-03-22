@@ -9,6 +9,8 @@ GET     /count                      controllers.AttendeesController.count
 
 GET     /all                        controllers.AttendeesController.getAll
 
+GET     /cricket/all                        controllers.CricketAttendeesController.getAll
+
 GET     /surname/:sname             controllers.AttendeesController.getBySurname(sname: String)
 
 GET     /soccer/new                  controllers.AttendeesController.addSoccerAttendeeThruForm()

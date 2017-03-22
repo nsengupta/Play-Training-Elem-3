@@ -1,4 +1,4 @@
-name := """my-attendees-app"""
+name := """Play-Training-Elem-3"""
 
 version := "1.0-SNAPSHOT"
 
@@ -15,4 +15,4 @@ libraryDependencies ++= Seq(
 libraryDependencies += "org.webjars" % "bootstrap" % "3.3.6"
 
 
-fork in run := true
+// fork in run := true
